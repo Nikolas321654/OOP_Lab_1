@@ -1,0 +1,47 @@
+﻿<Window x:Class="Laboratory.WorkTwo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratory"
+        mc:Ignorable="d"
+        Title="WorkTwo" Height="250" Width="470">
+
+    <StackPanel Margin="20" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Text="Move it"
+                   Background="LightBlue"
+                   TextAlignment="Center"
+                   Padding="10,5"
+                   Margin="0,0,0,20"/>
+
+        <Slider Height="20"
+                Width="300" 
+                ValueChanged="Slider_ValueChanged"
+                Margin="0,0,0,10"/>
+
+        <TextBlock x:Name="ValueTextBlock"
+                   HorizontalAlignment="Center" 
+                   Background="LightBlue"
+                   TextAlignment="Center"
+                   Padding="10,5"
+                   Text="0"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="AddButton"
+                    Content="Add"
+                    Width="75"
+                    Height="25"
+                    Click="Add_Click"
+                    Margin="0,0,10,0"/>
+
+            <Button x:Name="CancelButton"
+                    Content="Cancel"
+                    Width="75"
+                    Height="25"
+                    Click="Cancel_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="Laboratory.WorkOne"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratory"
+        mc:Ignorable="d"
+        Title="WorkOne" Height="250" Width="470">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Text="Enter any text"
+                   VerticalAlignment="Top"
+                   Background="LightBlue"
+                   TextAlignment="Center"
+                   Padding="10,5"
+                   Margin="0,0,0,10"/>
+
+        <TextBox Grid.Row="1"
+                 x:Name="InputTextBox"
+                 HorizontalAlignment="Center"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="236"
+                 Height="25"
+                 Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="3" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center">
+            <Button x:Name="AddButton"
+                    Content="Add"
+                    Width="75"
+                    Height="25"
+                    Click="Add_Click"
+                    Margin="0,0,10,0"/>
+
+            <Button x:Name="CancelButton"
+                    Content="Cancel"
+                    Width="75"
+                    Height="25"
+                    Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
