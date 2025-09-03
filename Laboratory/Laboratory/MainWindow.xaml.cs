@@ -29,11 +29,8 @@ namespace Laboratory
             {
                 string ?selectedValue = selectedItem.Content.ToString();
                 if (string.IsNullOrEmpty(selectedValue)) return;
-                
-                if (string.IsNullOrEmpty(selectedValue))
-                    return;
 
-                    switch (selectedValue)
+                switch (selectedValue)
                 {
                     case "Work-1":
                         WorkOne workOne = new WorkOne();
