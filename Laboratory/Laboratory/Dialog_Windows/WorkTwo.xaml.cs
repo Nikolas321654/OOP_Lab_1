@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratory.Dialog_Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,16 @@ namespace Laboratory
 {
     public partial class WorkTwo : Window
     {
-        public WorkTwo()
+        private readonly IServices _service;
+        public WorkTwo() : this(new Services())
+        {
+
+        }
+
+        public WorkTwo(IServices services)
         {
             InitializeComponent();
+            _service = services;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -28,12 +36,13 @@ namespace Laboratory
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            _service.GetValue(TextBlockSlider);
+            Close();
         }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            TextBlockSlider.Text = Math.Round(e.NewValue).ToString();
         }
     }
 }

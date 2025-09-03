@@ -38,6 +38,7 @@
         <StackPanel Grid.Row="3" 
                     Orientation="Horizontal" 
                     HorizontalAlignment="Center">
+            
             <Button x:Name="AddButton"
                     Content="Add"
                     Width="75"

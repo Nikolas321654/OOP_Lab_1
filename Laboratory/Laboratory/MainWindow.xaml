@@ -6,14 +6,21 @@
         xmlns:local="clr-namespace:Laboratory"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel Margin="10">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
         <ComboBox HorizontalAlignment="Left"
                   x:Name="WorkComboBox"
-                  Height="27"
+                  Grid.Row="0"
                   Width="200"
-                  SelectionChanged="ComboBox_SelectionChanged"
-                  Margin="0,0,0,10">
-            
+                  Height="40"
+                  SelectionChanged="ComboBox_SelectionChanged">
+
             <ComboBoxItem Name="FirstWork">Work-1</ComboBoxItem>
             <ComboBoxItem Name="SecondWork">Work-2</ComboBoxItem>
         </ComboBox>
@@ -21,11 +28,21 @@
         <TextBlock Text="Values:"
                    Background="LightBlue"
                    Padding="5"
-                   Margin="0,0,0,10"/>
+                   Height="30"
+                   Grid.Row="1"
+                   Margin="0,0,584,0"/>
 
         <TextBlock x:Name="ContentTextBlock"
-                   TextWrapping="Wrap"
-                   Padding="10"
-                   Height="300"/>
-    </StackPanel>
+                    TextWrapping="Wrap"
+                    Padding="10"
+                    Grid.Row="2"
+                    Text="" 
+                    Grid.RowSpan="2"/>
+
+        <Button Grid.Row="3"
+                Click="Clean_Click"
+                Content="Clean"
+                Height="40" 
+                Margin="0,5,600,5"/>
+    </Grid>
 </Window>

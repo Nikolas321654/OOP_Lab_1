@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratory.Dialog_Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,16 @@ namespace Laboratory
 {
     public partial class WorkOne : Window
     {
-        public WorkOne()
+        private readonly IServices _service;
+        public WorkOne() : this(new Services())
+        {
+
+        }
+
+        public WorkOne(IServices services)
         {
             InitializeComponent();
+            _service = services;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -28,7 +36,8 @@ namespace Laboratory
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            _service.GetValue(InputTextBox);
+            Close();
         }
     }
 }

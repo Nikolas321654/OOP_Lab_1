@@ -8,8 +8,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Dialog_Windows\DialogServices\" />
-  </ItemGroup>
-
 </Project>

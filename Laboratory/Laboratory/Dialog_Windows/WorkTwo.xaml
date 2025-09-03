@@ -8,6 +8,7 @@
         Title="WorkTwo" Height="250" Width="470">
 
     <StackPanel Margin="20" VerticalAlignment="Center">
+        
         <TextBlock HorizontalAlignment="Center"
                    TextWrapping="Wrap"
                    Text="Move it"
@@ -18,10 +19,13 @@
 
         <Slider Height="20"
                 Width="300" 
+                x:Name="SliderMain"
                 ValueChanged="Slider_ValueChanged"
+                Minimum="0"
+                Maximum="100" 
                 Margin="0,0,0,10"/>
 
-        <TextBlock x:Name="ValueTextBlock"
+        <TextBlock x:Name="TextBlockSlider"
                    HorizontalAlignment="Center" 
                    Background="LightBlue"
                    TextAlignment="Center"
@@ -29,7 +33,9 @@
                    Text="0"
                    Margin="0,0,0,20"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
             <Button x:Name="AddButton"
                     Content="Add"
                     Width="75"

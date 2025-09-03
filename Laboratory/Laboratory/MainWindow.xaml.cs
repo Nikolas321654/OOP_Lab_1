@@ -18,14 +18,22 @@ namespace Laboratory
             InitializeComponent();
         }
 
+        public void Clean_Click(object sender, RoutedEventArgs e)
+        {
+            ContentTextBlock.Text = "";
+        }
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             if (WorkComboBox.SelectedItem is ComboBoxItem selectedItem)
             {
-                string selectedValue = selectedItem.Content.ToString();
+                string ?selectedValue = selectedItem.Content.ToString();
+                if (string.IsNullOrEmpty(selectedValue)) return;
+                
+                if (string.IsNullOrEmpty(selectedValue))
+                    return;
 
-                switch (selectedValue)
+                    switch (selectedValue)
                 {
                     case "Work-1":
                         WorkOne workOne = new WorkOne();
@@ -37,7 +45,11 @@ namespace Laboratory
                         break;
                 }
             }
-            
+        }
+
+        public void AddText(string message)
+        {
+            ContentTextBlock.Text += $" {message}";
         }
     }
 }
